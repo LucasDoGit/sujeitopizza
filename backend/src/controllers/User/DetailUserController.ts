@@ -6,8 +6,6 @@ class DetailUserController {
 
         const user_id = req.user_id;
 
-        console.log("ID do user>", user_id)
-        
         const detalUserService = new DetailUserService;
 
         const user = await detalUserService.execute(user_id);
