@@ -40,7 +40,8 @@ router.post('/category', isAuthenticated, new CreateCategoryController().handle)
 router.get('/category', isAuthenticated, new ListCategoryController().handle)
 
 // -- ROUTES PRODUCT --
-router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle)
+// router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle) 
+router.post('/product', isAuthenticated, new CreateProductController().handle)
 
 // -- ROUTES FILTER PRODUCTS --
 router.get('/category/product', isAuthenticated, new ListByCategoryController().handle)
